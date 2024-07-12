@@ -1,0 +1,182 @@
+@port = 3000
+
+###
+GET http://localhost:{{port}}/api
+
+###
+GET http://localhost:{{port}}/api/sample/101?city=Miaoli&class=csie
+
+###
+POST http://localhost:{{port}}/api/sample/101?city=Miaoli&class=csie
+Content-Type: application/json
+
+{
+    "id": 2,
+    "name": "王二",
+    "email": "wang02@gmail.com"
+}
+
+###
+GET http://localhost:{{port}}/api/jsonDB/users
+
+###
+GET http://localhost:{{port}}/api/jsonDB/users/id/:id
+
+###
+POST http://localhost:{{port}}/api/jsonDB/users
+Content-Type: application/json
+
+{
+      "username": "Chang",
+      "email": "Chang@gmail.com",
+      "password": "33333",
+      "hashedPassword": "",
+      "role": "user",
+      "isAdmin": false
+    }
+
+
+###
+POST http://localhost:{{port}}/api/users/login_admin
+Content-Type: application/json
+
+{       
+      "email": "admin@gmail.com",
+      "password": "123456"
+    }
+
+###
+GET http://localhost:{{port}}/api/users/profile
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJkYXZpZDJAZ21haWwuY29tIiwibmFtZSI6ImFyZHdhc2MiLCJyb2xlcyI6Iml0LGFkbWluLGFjY291bnQiLCJpYXQiOjE3MTc2Mjc5NjUsImV4cCI6MTcxNzYzMTU2NX0.09TH8_lx38wjCy38E-qEjKfMmQ1_7-rhrvkbYtAA17I
+###
+GET http://localhost:{{port}}/api/users/protected
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJkYXZpZDJAZ21haWwuY29tIiwidXNlcm5hbWUiOiJEYXZpZDIiLCJyb2xlcyI6WyJndWVzdCIsIml0Il0sImlhdCI6MTcxNTMyODU4MywiZXhwIjoxNzE1MzMyMTgzfQ.2AiC88EtcWCi4OE9vrX0_Xe-NBaaNSiHPRwAsv2ulB4
+
+###
+GET http://localhost:{{port}}/api/users/onlyAdmin
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJkYXZpZDJAZ21haWwuY29tIiwibmFtZSI6ImFyZHdhc2MiLCJyb2xlcyI6Iml0LGFkbWluLGFjY291bnQiLCJpYXQiOjE3MTc2Mjg3ODksImV4cCI6MTcxNzYzMjM4OX0.1MjmmceGMLI5UzQKoxeCS89Ni_Aj7jw__RU7QLEEIwk
+
+###
+GET http://localhost:{{port}}/api/users/onlyguest
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJkYXZpZDJAZ21haWwuY29tIiwibmFtZSI6ImFyZHdhc2MiLCJyb2xlcyI6Iml0LGFkbWluLGFjY291bnQiLCJpYXQiOjE3MTc2Mjg3ODksImV4cCI6MTcxNzYzMjM4OX0.1MjmmceGMLI5UzQKoxeCS89Ni_Aj7jw__RU7QLEEIwk
+
+###
+GET http://localhost:{{port}}/api/users/create
+
+###
+GET http://localhost:{{port}}/api/users/drop
+
+###
+GET http://localhost:{{port}}/api/users/clear
+
+###
+GET http://localhost:{{port}}/api/users/getSchema
+
+###
+GET http://localhost:{{port}}/api/users/getFieldName
+
+###
+POST http://localhost:{{port}}/api/users/register
+Content-Type: application/json
+
+{       
+    "email": "david2@gmail.com",
+    "name": "david2",
+    "password": "123456",
+    "roles": "guest",
+    "phone": "0921854465"
+    }
+
+###
+PUT http://localhost:{{port}}/api/users/update
+Content-Type: application/json
+
+{       
+    "email": "david2@gmail.com",
+    "name": "david8",
+    "password": "12345999",
+    "phone": "0921695278"
+    }
+
+###
+POST http://localhost:{{port}}/api/users/getuser
+Content-Type: application/json
+
+{       
+    "id": 4
+    }
+###
+GET http://localhost:{{port}}/api/users/getuser1
+
+###
+POST http://localhost:{{port}}/api/users/register1
+Content-Type: application/json
+
+{       
+    "email": "a9291929130@gmail.com",
+    "name": "adsss",
+    "password": "123456",
+    "phone": "0921854465",
+    "activation_secret":"658861"
+    }
+
+###
+GET http://localhost:{{port}}/api/users/getfood
+
+###
+POST http://localhost:{{port}}/api/users/insertfood
+Content-Type: application/json
+
+{       
+    "name": "熊掌",
+    "price": "865"
+    }
+
+###
+POST http://localhost:{{port}}/api/users/deletefood
+Content-Type: application/json
+
+{
+    "id": "3"
+}
+
+###
+POST http://localhost:{{port}}/api/users/getuser2
+Content-Type: application/json
+
+{       
+    "email": "a92919291"
+    }
+
+###
+POST http://localhost:{{port}}/api/users/getuser3
+Content-Type: application/json
+
+{       
+    "email": "a9291929120@gmail.com"
+    }
+
+###
+GET http://localhost:{{port}}/api/users/getfood1
+###
+GET http://localhost:{{port}}/api/users/getfood2
+###
+GET http://localhost:{{port}}/api/users/getfood3
+###
+GET http://localhost:{{port}}/api/users/getfood4
+
+###
+POST http://localhost:{{port}}/api/users/getorder
+Content-Type: application/json
+
+{       
+    "user": "a9291929120@gmail.com"
+    }
+
+###
+POST http://localhost:{{port}}/api/users/deleteorder
+Content-Type: application/json
+
+{
+    "id": "1"
+}
