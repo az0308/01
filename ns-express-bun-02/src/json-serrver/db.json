@@ -1,0 +1,50 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "install json-server",
+      "idDone": false
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "david",
+      "email": "david@gmail.com",
+      "password": "123456",
+      "hashedPassword": "",
+      "role": "admin",
+      "isAdmin": true
+    },
+    {
+      "id": 2
+    },
+    {
+      "username": "Chang",
+      "email": "Chang@gmail.com",
+      "password": "33333",
+      "hashedPassword": "",
+      "role": "user",
+      "isAdmin": false,
+      "id": 3
+    },
+    {
+      "username": "Chang",
+      "email": "Chang@gmail.com",
+      "password": "33333",
+      "hashedPassword": "",
+      "role": "user",
+      "isAdmin": false,
+      "id": 4
+    },
+    {
+      "username": "Chang",
+      "email": "Chang@gmail.com",
+      "password": "33333",
+      "hashedPassword": "",
+      "role": "user",
+      "isAdmin": false,
+      "id": 5
+    }
+  ]
+}
