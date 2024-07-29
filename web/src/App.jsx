@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Home from "./Pages/Home";
@@ -7,6 +7,9 @@ import Menu from "./Pages/Menu";
 import Cart from "./Pages/Cart";
 import OrderHistory from "./Pages/OrderHistory";
 import User from "./Pages/User";
+import Flv from "./Pages/Flv";
+import Flv2 from "./Pages/Flv2";
+import Flv3 from "./Pages/Flv3";
 import BreakfastDetail from "./Pages/BreakfastDetail";
 import Checkout from "./Pages/Checkout";
 import AdminLogin from "./Pages/AdminLogin";
@@ -22,6 +25,9 @@ function App() {
                     <Route path="/" element={<Navigate to="/home" />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/home2" element={<Home2 />} />
+                    <Route path="/flv" element={<Flv />} />
+                    <Route path="/flv2" element={<Flv2 />} />
+                    <Route path="/flv3" element={<Flv3 />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/menu" element={<Menu />} />
@@ -40,5 +46,7 @@ function App() {
         </div>
     );
 }
+
+
 
 export default App;

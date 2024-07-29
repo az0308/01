@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import Navbar from "./../Components/Navbar";
+import Navbar from "./../Components/Navbar3";
 import PositionBar from "../Components/PositionBar";
+import { useNavigate } from "react-router-dom";
 import {
     Card,
     CardBody,
@@ -18,6 +19,7 @@ import images2 from "../Images/02.png";
 import images3 from "../Images/06.png";
 
 export default function Home() {
+    const navigate = useNavigate();
     return (
         <div>
             <Navbar />
@@ -25,21 +27,7 @@ export default function Home() {
                 <Container className="text-center mt-5 mb-5 pb-5 pt-4">
                     <header>
                         <h1>拳擊輔助判分系統</h1>
-                        <p className="mt-3">
-                            操作方法如下:
-                        </p>
-                        <p className="mt-3">
-                            1.註冊
-                        </p>
-                        <p className="mt-3">
-                            2.登入
-                        </p>
-                        <p className="mt-3">
-                            3.選擇要輔助判分的比賽類型
-                        </p>
-                        <p className="mt-3">
-                            4.選擇要創建房間或是要加入房間
-                        </p>
+                        <h4 className="mt-3">網站介紹:拳擊輔助判分系統......</h4>
                     </header>
                     <section className="mt-5 mb-4">
                         <h2>比賽類型</h2>
@@ -52,7 +40,7 @@ export default function Home() {
                                         <CardText>
                                             跆拳道是一種主要使用手及腳以進行格鬥或對抗的運動，為揉合了朝鮮半島古代搏擊防身技巧，以及跆跟、唐手和空手道融合的武術。    
                                         </CardText>
-                                        <Button variant="danger">選擇</Button>
+                                        <Button variant="danger" onClick={() => {navigate("/flv");}}>選擇</Button>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -64,7 +52,7 @@ export default function Home() {
                                         <CardText>
                                             拳擊，別名西洋拳、搏擊，是一項由兩位選手對賽的體育運動，只可使用拳頭進行攻擊與防禦，並佩戴拳擊手套以減低對手受創的程度。
                                         </CardText>
-                                        <Button variant="danger">選擇</Button>
+                                        <Button variant="danger" onClick={() => {navigate("/flv2");}}>選擇</Button>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -76,7 +64,7 @@ export default function Home() {
                                         <CardText>
                                             是泰國的傳統徒搏技術，特點是可以在極短的距離內，任意使用拳、腿、膝、肘攻擊對手，為一種注重實用的剛猛的競技型徒手武術。
                                         </CardText>
-                                        <Button variant="danger">選擇</Button>
+                                        <Button variant="danger" onClick={() => {navigate("/flv3");}}>選擇</Button>
                                     </CardBody>
                                 </Card>
                             </Col>
